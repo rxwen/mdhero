@@ -95,7 +95,7 @@ export async function initRenderer(): Promise<void> {
   if (initialized) return;
 
   md = new MarkdownIt({
-    html: false,
+    html: true,
     linkify: true,
     typographer: true,
     highlight: (str, lang) => {
@@ -139,7 +139,7 @@ export function renderFull(markdown: string, baseDir?: string): RenderResult {
   if (!md) {
     // Auto-init synchronously if not yet initialized
     md = new MarkdownIt({
-    html: false,
+    html: true,
     linkify: true,
     typographer: true,
     highlight: (str, lang) => {
