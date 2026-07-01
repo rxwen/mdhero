@@ -1,5 +1,5 @@
 mod commands;
-mod menu;
+pub mod menu;
 mod watcher;
 
 use std::sync::Mutex;
@@ -41,6 +41,7 @@ pub fn run() {
             commands::read_markdown_file,
             commands::write_markdown_file,
             commands::resolve_path,
+            commands::path_exists,
             commands::allow_assets,
             commands::list_claude_plans,
             commands::list_folder_md_files,
